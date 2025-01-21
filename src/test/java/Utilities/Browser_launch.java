@@ -1,16 +1,12 @@
 package Utilities;
 
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.asserts.SoftAssert;
+import org.testng.annotations.Test;
 
-import TestCase.TC002_Add_Enquiry;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser_launch {
@@ -37,7 +33,7 @@ public class Browser_launch {
 		return Browser_launch;
 	}
 
-	@BeforeClass
+	@Test
 	public void browser() {
 
 		try {
@@ -48,6 +44,7 @@ public class Browser_launch {
 			throw new RuntimeException("Failed to initialize browser in @BeforeClass", e);
 		}
 	}
+	
 
 //	@AfterClass
 //	public void teardown() {

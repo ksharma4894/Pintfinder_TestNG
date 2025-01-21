@@ -2,12 +2,15 @@ package PageObject;
 
 import java.awt.Window;
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.Test;
 
+import Utilities.Browser_launch;
 import Utilities.Page_Factory_Setup;
 
 public class Enquiry_Page extends Page_Factory_Setup {
@@ -46,7 +49,7 @@ public class Enquiry_Page extends Page_Factory_Setup {
 	@FindBy(xpath = "//a[text()='Angebot erstellen']")
 	WebElement create_offer;
 
-	@FindBy(xpath = "//input[@class='ng-touched ng-dirty ng-invalid']")
+	@FindBy(xpath = "//input[@formcontrolname='pricePerThousand']")
 	WebElement addprice;
 	@FindBy(xpath = "//button[text()='Angebot senden']")
 	WebElement submit;
@@ -104,5 +107,27 @@ WebElement ordercnf;
 		
 
 	}
+	public String BuyerWindow() {
+		String Buyerwindow = Browser_launch.driver.getWindowHandle();
+		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
+		return Buyerwindow;
+		
+	}
+
+
+	public void Windowchange(String windowId) {
+
+		Set<String> allWindowHandles = Browser_launch.driver.getWindowHandles();
+
+		for (String handle : allWindowHandles) {
+			// Here you can check for the desired window handle
+			if (handle.equals(windowId)) {
+				Browser_launch.driver.switchTo().window(handle);
+				break;
+
+			}
+		}
+	}
+
 
 }

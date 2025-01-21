@@ -12,7 +12,7 @@ import Utilities.Browser_launch;
 
 public class TC002_Add_Enquiry {
 
-	public static String Buyerwindow;
+	public static String Buyerid;
 
 	@Test
 
@@ -49,11 +49,16 @@ public class TC002_Add_Enquiry {
 		softassert.assertEquals(title, "Anfragen");
 		Thread.sleep(5000);
 		
-		String Buyerwindow = Browser_launch.driver.getWindowHandle();
-		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
+		 Buyerid = add_enq.BuyerWindow();
+		
+//		String Buyerwindow = Browser_launch.driver.getWindowHandle();
+//		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
+		
+	
 		
 		//add_enq.logout();
 
 	}
+
 
 }
