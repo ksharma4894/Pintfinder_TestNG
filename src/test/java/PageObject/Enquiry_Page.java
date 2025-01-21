@@ -80,12 +80,12 @@ WebElement ordercnf;
 		return enqid;
 	}
 
-	public void logout()
-
-	{
-		log_out.click();
-
-	}
+//	public void logout()
+//
+//	{
+//		log_out.click();
+//
+//	}
 
 	public void search(String enqid2) {
 

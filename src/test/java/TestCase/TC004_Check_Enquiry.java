@@ -1,5 +1,7 @@
 package TestCase;
 
+import java.util.Set;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -20,7 +22,18 @@ public class TC004_Check_Enquiry {
 		String titleCnfOrder = enq.create_offer("1234");
 
 		softasr.assertEquals(titleCnfOrder, "Angebote");
-		enq.logout();
+
+		String SupplierWindow = Browser_launch.driver.getWindowHandle();
+		System.out.println(SupplierWindow);
+
+		Thread.sleep(2000);
+		Browser_launch.driver.switchTo().window(TC002_Add_Enquiry.Buyerwindow);
+		System.out.println(TC002_Add_Enquiry.Buyerwindow);
+
+//		Set<String> winhandles = Browser_launch.driver.getWindowHandles();
+//		System.out.println(winhandles);
+
+		// enq.logout();
 
 	}
 

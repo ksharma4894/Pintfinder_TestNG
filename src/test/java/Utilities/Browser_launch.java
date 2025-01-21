@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
+import TestCase.TC002_Add_Enquiry;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser_launch {
@@ -41,6 +42,7 @@ public class Browser_launch {
 
 		try {
 			Browser_launch.getInstance();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException("Failed to initialize browser in @BeforeClass", e);

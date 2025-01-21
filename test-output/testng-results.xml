@@ -2,46 +2,34 @@
 <testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-17T17:30:54 IST" name="Suite" finished-at="2025-01-17T17:31:53 IST" duration-ms="59328">
+  <suite started-at="2025-01-21T17:47:30 IST" name="Suite" finished-at="2025-01-21T17:48:42 IST" duration-ms="71172">
     <groups>
     </groups>
-    <test started-at="2025-01-17T17:30:54 IST" name="Test" finished-at="2025-01-17T17:31:53 IST" duration-ms="59328">
+    <test started-at="2025-01-21T17:47:30 IST" name="Test" finished-at="2025-01-21T17:48:42 IST" duration-ms="71172">
       <class name="TestCase.TC004_Check_Enquiry">
-        <test-method signature="View_enquiry()[pri:0, instance:TestCase.TC004_Check_Enquiry@79079097]" started-at="2025-01-17T17:31:47 IST" name="View_enquiry" finished-at="2025-01-17T17:31:53 IST" duration-ms="6275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- View_enquiry -->
-      </class> <!-- TestCase.TC004_Check_Enquiry -->
-      <class name="TestCase.TC003_Login_Supplier">
-        <test-method signature="Supplier_Login()[pri:0, instance:TestCase.TC003_Login_Supplier@3bf7ca37]" started-at="2025-01-17T17:31:40 IST" name="Supplier_Login" finished-at="2025-01-17T17:31:47 IST" duration-ms="6862" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Supplier_Login -->
-      </class> <!-- TestCase.TC003_Login_Supplier -->
-      <class name="TestCase.TC002_Add_Enquiry">
-        <test-method signature="Add_enquiry()[pri:0, instance:TestCase.TC002_Add_Enquiry@3c9754d8]" started-at="2025-01-17T17:31:08 IST" name="Add_enquiry" finished-at="2025-01-17T17:31:40 IST" duration-ms="31907" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method signature="View_enquiry()[pri:0, instance:TestCase.TC004_Check_Enquiry@ba2f4ec]" started-at="2025-01-21T17:48:25 IST" name="View_enquiry" finished-at="2025-01-21T17:48:42 IST" duration-ms="16841" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element <span _ngcontent-hfo-c162="" jhitranslate="global.navbar.logout" ng-reflect-jhi-translate="global.navbar.logout">...</span> is not clickable at point (1460, 28). Other element would receive the click: <div role="alertdialog" aria-live="polite" class="ng-tns-c157-2 toast-message ng-star-inserted" aria-label="Anfrage erfolgreich übermittelt" style="">...</div>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='ng-touched ng-dirty ng-invalid']"}
   (Session info: chrome=132.0.6834.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2784c81eddd20f4b24c9c9e436477757, clickElement {id=f.99339506F79A15C487778EBD4EA4B4C0.d.237BAE8F52FECFFC409E5AEE9B51B548.e.303}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.84, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\singity\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55392}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55392/devtoo..., se:cdpVersion: 132.0.6834.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2784c81eddd20f4b24c9c9e436477757)] -> xpath: //span[text()='Abmelden']]
-Session ID: 2784c81eddd20f4b24c9c9e436477757]]>
+Command: [f77aff91a09aab4d4707b30db4397453, findElement {value=//input[@class='ng-touched ng-dirty ng-invalid'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.84, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\singity\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59986}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59986/devtoo..., se:cdpVersion: 132.0.6834.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f77aff91a09aab4d4707b30db4397453]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span _ngcontent-hfo-c162="" jhitranslate="global.navbar.logout" ng-reflect-jhi-translate="global.navbar.logout">...</span> is not clickable at point (1460, 28). Other element would receive the click: <div role="alertdialog" aria-live="polite" class="ng-tns-c157-2 toast-message ng-star-inserted" aria-label="Anfrage erfolgreich übermittelt" style="">...</div>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='ng-touched ng-dirty ng-invalid']"}
   (Session info: chrome=132.0.6834.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2784c81eddd20f4b24c9c9e436477757, clickElement {id=f.99339506F79A15C487778EBD4EA4B4C0.d.237BAE8F52FECFFC409E5AEE9B51B548.e.303}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.84, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\singity\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55392}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55392/devtoo..., se:cdpVersion: 132.0.6834.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2784c81eddd20f4b24c9c9e436477757)] -> xpath: //span[text()='Abmelden']]
-Session ID: 2784c81eddd20f4b24c9c9e436477757
+Command: [f77aff91a09aab4d4707b30db4397453, findElement {value=//input[@class='ng-touched ng-dirty ng-invalid'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.84, chrome: {chromedriverVersion: 132.0.6834.83 (03d59cf5ecf1..., userDataDir: C:\Users\singity\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59986}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59986/devtoo..., se:cdpVersion: 132.0.6834.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f77aff91a09aab4d4707b30db4397453
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -52,14 +40,15 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
-at PageObject.Enquiry_Page.logout(Enquiry_Page.java:80)
-at TestCase.TC002_Add_Enquiry.Add_enquiry(TC002_Add_Enquiry.java:45)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy10.sendKeys(Unknown Source)
+at PageObject.Enquiry_Page.create_offer(Enquiry_Page.java:100)
+at TestCase.TC004_Check_Enquiry.View_enquiry(TC004_Check_Enquiry.java:22)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -88,13 +77,25 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- View_enquiry -->
+      </class> <!-- TestCase.TC004_Check_Enquiry -->
+      <class name="TestCase.TC003_Login_Supplier">
+        <test-method signature="Supplier_Login()[pri:0, instance:TestCase.TC003_Login_Supplier@3bf7ca37]" started-at="2025-01-21T17:48:18 IST" name="Supplier_Login" finished-at="2025-01-21T17:48:25 IST" duration-ms="7177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Supplier_Login -->
+      </class> <!-- TestCase.TC003_Login_Supplier -->
+      <class name="TestCase.TC002_Add_Enquiry">
+        <test-method signature="Add_enquiry()[pri:0, instance:TestCase.TC002_Add_Enquiry@3c9754d8]" started-at="2025-01-21T17:47:46 IST" name="Add_enquiry" finished-at="2025-01-21T17:48:18 IST" duration-ms="31516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_enquiry -->
       </class> <!-- TestCase.TC002_Add_Enquiry -->
       <class name="TestCase.TC001_Login_Buyer">
-        <test-method signature="Buyer_Login()[pri:1, instance:TestCase.TC001_Login_Buyer@74e52ef6]" started-at="2025-01-17T17:30:54 IST" name="Buyer_Login" finished-at="2025-01-17T17:31:08 IST" duration-ms="14167" status="PASS">
+        <test-method signature="Buyer_Login()[pri:0, instance:TestCase.TC001_Login_Buyer@74e52ef6]" started-at="2025-01-21T17:47:31 IST" name="Buyer_Login" finished-at="2025-01-21T17:47:46 IST" duration-ms="15525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Buyer_Login -->

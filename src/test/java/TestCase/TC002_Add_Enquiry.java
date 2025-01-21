@@ -1,5 +1,7 @@
 package TestCase;
 
+import java.util.Set;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -9,6 +11,8 @@ import Utilities.AssertCreation;
 import Utilities.Browser_launch;
 
 public class TC002_Add_Enquiry {
+
+	public static String Buyerwindow;
 
 	@Test
 
@@ -44,7 +48,11 @@ public class TC002_Add_Enquiry {
 		// Assert.assertEquals(title, c);
 		softassert.assertEquals(title, "Anfragen");
 		Thread.sleep(5000);
-		add_enq.logout();
+		
+		String Buyerwindow = Browser_launch.driver.getWindowHandle();
+		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
+		
+		//add_enq.logout();
 
 	}
 

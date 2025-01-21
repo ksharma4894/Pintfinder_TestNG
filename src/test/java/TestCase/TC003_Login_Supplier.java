@@ -10,6 +10,9 @@ public class TC003_Login_Supplier {
 	@Test
 	void Supplier_Login() throws InterruptedException
 	{
+		System.out.println("Stating new window");
+		Browser_launch.getInstance();
+		
 		Login_Page l_page = new Login_Page(Browser_launch.driver);
 		Thread.sleep(2000);
 		Browser_launch.driver.navigate().to("https://printsmartz.signitydemo.in");
