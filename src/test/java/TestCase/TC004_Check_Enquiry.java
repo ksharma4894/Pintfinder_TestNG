@@ -35,7 +35,7 @@ public class TC004_Check_Enquiry {
 
 		enq.Windowchange(TC002_Add_Enquiry.Buyerid);   // For Change to buyer window	
 		System.out.println("Cchecking with git changes");
-		System.out.println("push to Test branch");
+		System.out.println("push to Test branch 123444");
 
 	}
 
