@@ -13,6 +13,8 @@ import Utilities.Page_Factory_Setup;
 public class TC004_Check_Enquiry {
 	AssertCreation softCreation = AssertCreation.getObject();
 	SoftAssert softasr = softCreation.softasr;
+	
+	public static String SupplierWindow;
 
 	@Test
 	void View_enquiry() throws InterruptedException {
@@ -28,14 +30,17 @@ public class TC004_Check_Enquiry {
 
 		softasr.assertEquals(titleCnfOrder, "Angebote");
 
-		String SupplierWindow = Browser_launch.driver.getWindowHandle();
+		SupplierWindow = Browser_launch.driver.getWindowHandle();
 
 		Thread.sleep(2000);
 		
 
 		enq.Windowchange(TC002_Add_Enquiry.Buyerid);   // For Change to buyer window	
+		
 		System.out.println("Cchecking with git changes");
 		System.out.println("push to Test branch 123444");
+		AssertCreation assertCreation = AssertCreation.getObject();	
+		assertCreation.softasr.assertAll();
 
 	}
 

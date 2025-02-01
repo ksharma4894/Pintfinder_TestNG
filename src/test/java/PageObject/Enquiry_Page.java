@@ -35,6 +35,11 @@ public class Enquiry_Page extends Page_Factory_Setup {
 	WebElement prod_name;
 	@FindBy(xpath = "//input[@placeholder='Auflage']")
 	WebElement copies;
+	@FindBy(xpath = "//input[@name='myfile']")
+	WebElement FileNotes;
+	@FindBy(xpath = "//textarea[@placeholder='Eingabe Bemerkungen']")
+	WebElement Remarks;
+
 	@FindBy(xpath = "//button[text()='Lieferanten auswählen']")
 	WebElement Srch_supplier;
 	@FindBy(xpath = "//span[text()='Abmelden']")
@@ -53,8 +58,9 @@ public class Enquiry_Page extends Page_Factory_Setup {
 	WebElement addprice;
 	@FindBy(xpath = "//button[text()='Angebot senden']")
 	WebElement submit;
-@FindBy(xpath = "//div[@class='ng-tns-c157-1 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-success']")
-WebElement ordercnf;
+	@FindBy(xpath = "//div[@class='ng-tns-c157-1 ng-star-inserted ng-trigger ng-trigger-flyInOut ngx-toastr toast-success']")
+	WebElement ordercnf;
+
 	public void enq_lefsidemenu() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -67,18 +73,26 @@ WebElement ordercnf;
 	}
 
 	public String Add_enq_details() throws InterruptedException {
+	
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Thread.sleep(4000);
 		String enqid = enquiry_id.getText();
-		System.out.println("Below is enq id");
-		System.out.println(enqid);
 		enquiryid = enqid;
 
-		proj_name.sendKeys("Checkinig with automation tool");
+		proj_name.sendKeys("Banner Enquiry");
 //		prod_name.click();
 //		prod_name.sendKeys("Becher");
 //		prod_name.sendKeys(Keys.ENTER);
 		copies.sendKeys("234");
+		Remarks.sendKeys("adding Remarks in remarks field ton testing once again");
+		System.out.println("take image from location");
+		Thread.sleep(3000);
+
+		FileNotes.sendKeys("C:\\Users\\singity\\eclipse-workspace1\\PrintFinder_TestNG\\src\\test\\resources\\Screenshots\\Profile Image\\BuyerImage.jpg");	
+		//System.out.println(projectDir);
+	//	FileNotes.sendKeys("C:\\Users\\singity\\Documents\\Lightshot\\BuyerImage.jpg");
+		Thread.sleep(6000);
+		System.out.println("File take successfully");
 		Srch_supplier.click();
 		return enqid;
 	}
@@ -104,16 +118,15 @@ WebElement ordercnf;
 		submit.click();
 		Thread.sleep(4000);
 		return driver.getTitle();
-		
 
 	}
+
 	public String BuyerWindow() {
 		String Buyerwindow = Browser_launch.driver.getWindowHandle();
-		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
+		System.out.println("This is the Whandlesof Buyer" + Buyerwindow);
 		return Buyerwindow;
-		
-	}
 
+	}
 
 	public void Windowchange(String windowId) {
 
@@ -128,6 +141,5 @@ WebElement ordercnf;
 			}
 		}
 	}
-
 
 }

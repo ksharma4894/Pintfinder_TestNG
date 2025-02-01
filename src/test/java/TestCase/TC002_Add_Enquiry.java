@@ -13,6 +13,7 @@ import Utilities.Browser_launch;
 public class TC002_Add_Enquiry {
 
 	public static String Buyerid;
+	public static  SoftAssert softassert;
 
 	@Test
 
@@ -40,7 +41,7 @@ public class TC002_Add_Enquiry {
 		String confirm = supplier_srch.supplier_select();
 //		Assert.assertEquals(confirm, " Lieferant ausgewählt ");
 //	
-		SoftAssert softassert = new SoftAssert();
+		softassert = new SoftAssert();
 		
 		softassert.assertEquals(confirm, " Lieferant ausgewählt ");
 		Thread.sleep(5000);
@@ -50,12 +51,8 @@ public class TC002_Add_Enquiry {
 		Thread.sleep(5000);
 		
 		 Buyerid = add_enq.BuyerWindow();
-		
-//		String Buyerwindow = Browser_launch.driver.getWindowHandle();
-//		System.out.println("This is the Whandlesof Buyer" +Buyerwindow);
-		
-	
-		
+		 softassert.assertAll();
+
 		//add_enq.logout();
 
 	}

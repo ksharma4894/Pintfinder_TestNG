@@ -20,8 +20,9 @@ public class User_Profil_Page extends Page_Factory_Setup {
 
 	@FindBy(xpath = "//input[@formcontrolname='company']")
 	WebElement cmp_name;
-	@FindBy(xpath = "//span[text()='Gesamtzahl der Lieferanten']") WebElement headingclick;
-	@FindBy(xpath = "//button[text()='Auswählen ']")
+	@FindBy(xpath = "//span[text()='Gesamtzahl der Lieferanten']")
+	WebElement headingclick;
+	@FindBy(xpath = "//button[text()='Lieferant auswählen '] ")
 	WebElement slct_supplier;
 	@FindBy(xpath = "//div[text()=' Lieferant ausgewählt ']")
 	WebElement conf_sup; // confirmation after selecting supplier
@@ -29,13 +30,14 @@ public class User_Profil_Page extends Page_Factory_Setup {
 	WebElement slctd_supplier;
 	@FindBy(xpath = "//span[text()='Anfrage versenden']")
 	WebElement sbmit_enq;
-	
+
+	@FindBy(xpath = "//li[1]//div[1]//div[2]//span[1]//i[1]")
+	WebElement cameraclick;
 
 	public void companyname(String cname) throws InterruptedException {
 		cmp_name.sendKeys(cname);
-		//act.sendKeys(Keys.ENTER);
+		// act.sendKeys(Keys.ENTER);
 		headingclick.click();
-		
 
 	}
 
@@ -43,10 +45,9 @@ public class User_Profil_Page extends Page_Factory_Setup {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		slct_supplier.click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		String inf = conf_sup.getText(); // confirmation message displaying
 		slctd_supplier.click();
-		
+
 		return inf;
 	}
 
@@ -57,6 +58,13 @@ public class User_Profil_Page extends Page_Factory_Setup {
 		String title_enq = driver.getTitle();
 		return title_enq;
 
+	}
+
+	public void BuyerPofileImage() {
+		// String filepath = ";
+
+		cameraclick.sendKeys("C:\\Users\\singity\\eclipse-workspace1\\PrintFinder_TestNG\\src\\test\\resources\\Screenshots\\Profile Image\\BuyerImage.jpg");	
+		System.out.println("user.dir");
 	}
 
 }
