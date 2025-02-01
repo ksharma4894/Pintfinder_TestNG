@@ -8,7 +8,11 @@
 			<class name="TestCase.TC002_Add_Enquiry" />
 			<class name="TestCase.TC003_Login_Supplier" />
 			<class name="TestCase.TC004_Check_Enquiry" />
-			
+			<!--	<class name="TestCase.TC005_ProfileUpdate" /> -->
+			<class name="TestCase.TC005_BuyerCheckOffer" />
+			<class name="TestCase.TC006_ViewOrder" />
+
+
 		</classes>
 	</test> <!--
 	Test -->
