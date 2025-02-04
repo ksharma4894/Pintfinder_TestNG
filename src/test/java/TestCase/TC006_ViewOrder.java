@@ -16,8 +16,8 @@ public class TC006_ViewOrder {
 		System.out.println("I am in Supplier window");
 		Browser_launch.driver.navigate().to("https://printsmartz.signitydemo.in/supplier/orders");
 		Enquiry_Page enpage = new Enquiry_Page(Browser_launch.driver);
-		enpage.search(Offer_Page.ordnum);
-		System.out.println("Orde id is -->"+Offer_Page.ordnum);
+		enpage.search(Enquiry_Page.priceId);
+		System.out.println("Orde id is -->"+Enquiry_Page.priceId);
 		
 	}
 }
