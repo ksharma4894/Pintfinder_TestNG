@@ -17,7 +17,7 @@ public class Offer_Page extends Page_Factory_Setup {
 
 	@FindBy(xpath = "//span[text()='Angebot anzeigen']")
 	WebElement ViewOffer;
-	@FindBy(xpath = "(//span[text()='Bestellung aufgeben'])[1]")
+	@FindBy(xpath = "(//button[@class='btn btn-success br-8 ml-2 ng-star-inserted']")
 	WebElement PlaceOrder;
 	@FindBy(xpath = "//span[@id='jhi-delete-userProfile-heading']")
 	WebElement confirmbutton;
@@ -28,11 +28,15 @@ public class Offer_Page extends Page_Factory_Setup {
 	@FindBy(xpath = "(//div[@style='cursor: pointer;'])[1]")
 	WebElement odernum;
 
-	public void viewOffer() {
+	public void viewOffer() throws InterruptedException {
 		ViewOffer.click();
+		Thread.sleep(2000);	
 		PlaceOrder.click();
+		Thread.sleep(2000);	
 		confirmbutton.click();
+		Thread.sleep(2000);	
 		orderconfirm.click();
+		Thread.sleep(2000);	
 		finalconfirm.click();
 
 	}

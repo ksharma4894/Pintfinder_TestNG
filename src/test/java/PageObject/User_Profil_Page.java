@@ -22,7 +22,7 @@ public class User_Profil_Page extends Page_Factory_Setup {
 	WebElement cmp_name;
 	@FindBy(xpath = "//span[text()='Gesamtzahl der Lieferanten']")
 	WebElement headingclick;
-	@FindBy(xpath = "//button[text()='Lieferant auswählen '] ")
+	@FindBy(xpath = "//button[@class='btn custom-btn ng-star-inserted'] ")
 	WebElement slct_supplier;
 	@FindBy(xpath = "//div[text()=' Lieferant ausgewählt ']")
 	WebElement conf_sup; // confirmation after selecting supplier

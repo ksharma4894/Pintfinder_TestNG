@@ -2,8 +2,10 @@ package PageObject;
 
 import java.awt.Window;
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +18,7 @@ import Utilities.Page_Factory_Setup;
 public class Enquiry_Page extends Page_Factory_Setup {
 
 	public static String enquiryid;
+	public static String priceId;
 
 	public Enquiry_Page(WebDriver driver) {
 		super(driver);
@@ -73,7 +76,7 @@ public class Enquiry_Page extends Page_Factory_Setup {
 	}
 
 	public String Add_enq_details() throws InterruptedException {
-	
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Thread.sleep(4000);
 		String enqid = enquiry_id.getText();
@@ -88,9 +91,10 @@ public class Enquiry_Page extends Page_Factory_Setup {
 		System.out.println("take image from location");
 		Thread.sleep(3000);
 
-		FileNotes.sendKeys("C:\\Users\\singity\\eclipse-workspace1\\PrintFinder_TestNG\\src\\test\\resources\\Screenshots\\Profile Image\\BuyerImage.jpg");	
-		//System.out.println(projectDir);
-	//	FileNotes.sendKeys("C:\\Users\\singity\\Documents\\Lightshot\\BuyerImage.jpg");
+		FileNotes.sendKeys(
+				"C:\\Users\\singity\\eclipse-workspace1\\PrintFinder_TestNG\\src\\test\\resources\\Screenshots\\Profile Image\\BuyerImage.jpg");
+		// System.out.println(projectDir);
+		// FileNotes.sendKeys("C:\\Users\\singity\\Documents\\Lightshot\\BuyerImage.jpg");
 		Thread.sleep(6000);
 		System.out.println("File take successfully");
 		Srch_supplier.click();
@@ -117,8 +121,23 @@ public class Enquiry_Page extends Page_Factory_Setup {
 		addprice.sendKeys(price);
 		submit.click();
 		Thread.sleep(4000);
+
 		return driver.getTitle();
 
+	}
+
+	public String offerId(String enqid) throws InterruptedException {
+
+		Thread.sleep(5000);
+		search(enqid);
+
+		List<WebElement> offerIds = driver.findElements(By.xpath("//div[@class='anchor-tag']"));
+		// ArrayList<WebElement> offerId = new ArrayList<offerIds> ;
+		System.out.println("Thios all are id of offer id)" + offerIds);
+		String priceId1 = offerIds.get(0).getText();
+		// int priceId = Integer.parseInt(offerId);
+		priceId = priceId1;
+		return priceId;
 	}
 
 	public String BuyerWindow() {
